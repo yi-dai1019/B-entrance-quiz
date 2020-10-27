@@ -16,7 +16,7 @@ public class StudentRepository {
             "雅典娜", "芈月", "白起", "刘禅", "庄周",
             "马超", "刘备", "哪吒", "大乔", "蔡文姬");
 
-    public List<Student> findAll() {
+    public static List<Student> findAll() {
         studentList = new ArrayList<>();
         for (int i = 0; i < nameList.size(); i++) {
             String name = nameList.get(i);
@@ -26,4 +26,7 @@ public class StudentRepository {
         return studentList;
     };
 
+    public void addStudent(String name) {
+        nameList.add(name);
+    }
 }

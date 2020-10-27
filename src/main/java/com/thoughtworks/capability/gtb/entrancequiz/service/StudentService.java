@@ -19,4 +19,7 @@ public class StudentService {
        return allStudent;
     }
 
+    public void addStudent(String name) {
+        studentRepository.addStudent(name);
+    }
 }
