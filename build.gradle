@@ -8,6 +8,12 @@ group = 'com.thoughtworks.capability.gtb'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
 repositories {
     maven {
         url "http://maven.aliyun.com/nexus/content/groups/public"
@@ -15,6 +21,8 @@ repositories {
 }
 
 dependencies {
+	compile 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
