@@ -10,6 +10,7 @@ import java.util.List;
 
 @Repository
 public class StudentRepository {
+    //TODO GTB-工程实践: - 这个 studentList 很奇怪，每次返回 list 还要实时根据 name 生成？以后了删除功能，student 的 id 还会发生改变？
     private static List<Student> studentList;
     private static List<String> nameList = Arrays.asList(
             "成吉思汗", "鲁班七号", "太乙真人", "钟无艳", "花木兰",

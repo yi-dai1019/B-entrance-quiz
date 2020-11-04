@@ -25,6 +25,8 @@ public class StudentController {
         return ResponseEntity.status(HttpStatus.OK).body(students);
     }
 
+    //TODO GTB-知识点: - POST 时 path 变成的单数了？
+    //TODO GTB-知识点: - 了解一下 @ResponseStatus
     @PostMapping("/student")
     public ResponseEntity<HttpStatus> addStudent(@RequestBody String name) {
 
